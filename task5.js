@@ -2,11 +2,10 @@
 // Если функции передана правильная строка PIN, верните true, иначе верните false.
 
 function correctPin(str){
-    if (str.length===4 || str.length===6)
+    if ((str.length===4 || str.length===6) && !str.split('').map(item=>isFinite(item)).includes(false))
         return true
     return false
 }
 
-console.log(correctPin('4645'))
-console.log(correctPin('46'))
-console.log(correctPin('465577'))
+console.log(correctPin('5545'))
+console.log(correctPin('46ee'))
