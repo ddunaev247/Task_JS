@@ -4,7 +4,7 @@
 
 
 function findMamMinString(str){
-    result = str.split(' ').sort((a,b)=>+a - +b)
+    result = str.split(' ').map(item=>+item).sort((a,b)=>a-b)
     return `${result[result.length-1]} ${result[0]}`
 }
 console.log(findMamMinString("4 5 29 54 4 0 -123 666 -64 1 -3 6 -6"))
