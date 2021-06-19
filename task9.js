@@ -2,7 +2,7 @@
 //Строка никогда не будет пустой, и вам не нужно учитывать разные типы данных.
 
 function simple(str){
-    result = str.split(' ').map(item => item.length).sort((a,b) => a-b)
+    let result = str.split(' ').map(item => item.length).sort((a,b) => a-b)
     return result[0]
 }
 
