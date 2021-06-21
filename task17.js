@@ -3,13 +3,7 @@
 
 const solution = str => str
     .split('')
-    .map(item => {
-        if (item === item.toUpperCase()){
-            return '_' + item.toLowerCase()
-        }
-        return item
-        
-    })
+    .map(item => item === item.toUpperCase()? '_' + item.toLowerCase():item)
     .join('')
 
 
