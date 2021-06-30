@@ -3,10 +3,6 @@
 
 String.prototype.endsWith = function(end){
     return this.split(' ').reverse().indexOf(end)===0
-     
-
-
-
 }
 
 let str = "Каждый охотник желает знать";
