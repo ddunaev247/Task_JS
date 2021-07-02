@@ -7,8 +7,12 @@
 //findMissingLetter(['a','b','c','d','f']) -> 'e'
 
 const findMissingLetter = arr => {
-    let result = []
-    result = arr.map(item=>item.codePointAt(0)).filter((item,index,array)=>2<=array[index+1]-item).map(item=>String.fromCodePoint(item+1))
-    return result
+    checkRegistr = arr.filter(item=>item===item.toUpperCase()&&item!==item.toLowerCase())
+    if (2<=arr.length && 0>=checkRegistr.length){
+        result = arr.map(item=>item.codePointAt(0)).filter((item,index,array)=>2<=array[index+1]-item).map(item=>String.fromCodePoint(item+1))
+            return result
+    }
+    return 'размер массива меньше 2х элементов/элементы не в одном регистре'
 }
-console.log(findMissingLetter(['a','b','c','d','f']))
+
+console.log(findMissingLetter(['a','C','c','d','f']))
