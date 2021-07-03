@@ -13,16 +13,16 @@ let uniqueArr = Array.from( new Set(arr))
         arrLengthElem.push(pushElem.length)
         }   
 
-let MaxElem = 0
-let IndexmaxElem = 0
+let maxElem = 0
+let indexMaxElem = 0
 
     for (let i = 0;i<arrLengthElem.length;i++){
-        if (MaxElem<arrLengthElem[i]){
-            MaxElem = arrLengthElem[i]
-            IndexmaxElem = i
+        if (maxElem<arrLengthElem[i]){
+            maxElem = arrLengthElem[i]
+            indexMaxElem = i
         }
     }
-return uniqueArr[IndexmaxElem]
+return uniqueArr[indexMaxElem]
 }
 
 console.log(maxRepElem(array))
